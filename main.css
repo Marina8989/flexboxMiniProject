@@ -1,5 +1,9 @@
 body{
-
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
 }
 .card{
     width: 90%;
@@ -10,14 +14,7 @@ body{
     display: flex;
     flex-direction: column;
 }
-@media (min-width: 600px) {
-     .card{
-         flex-direction: row;
-     }
-     .card-img{
-         height: 300px;
-     }
-}
+
 .card-img{
     object-fit: cover;
     flex-basis: 200px;
@@ -69,4 +66,26 @@ body{
     font-weight: 700;
     display: block;
     font-size: 1.25em;
+}
+@media (min-width: 600px) {
+     .card{
+         flex-direction: row;
+     }
+     .card-img{
+         height: 300px;
+     }
+     .card-content {
+         display: flex;
+         flex-direction: column;
+     }
+     .card-title{
+         font-size: 2.25rem;
+     }
+     .card-body{
+         font-size: 1.125rem;
+         max-width: 500px;
+     }
+     .card-footer{
+         margin-top: auto;
+     }
 }
